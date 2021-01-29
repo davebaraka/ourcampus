@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardView"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textViewSummary"
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Awesome"
+            android:textColor="@color/material_gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgViewProPic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="3.4"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@+id/textViewSummary"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSummary" />
+
+        <TextView
+            android:id="@id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nov 4, 2019"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSummary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewSummary" />
+
+        <ImageButton
+            android:layout_marginTop="2dp"
+            android:id="@+id/imgBtnDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chevron_down_outline"
+            android:theme="@style/SelectableItemDefault"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+        <LinearLayout
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+            tools:layout_editor_absoluteX="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                tools:layout_editor_absoluteX="16dp">
+
+                <TextView
+                    android:id="@+id/textViewOverallRatingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overall Rating"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewDifficultyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level of Difficulty"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOverallRatingTitle" />
+
+                <TextView
+                    android:id="@+id/textViewOverallRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="4.9"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOverallRatingTitle" />
+
+                <TextView
+                    android:id="@+id/textViewDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="2.1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOverallRatingTitle" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="#e0e0e0"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOverallRating"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOverallRatingTitle" />
+
+                <TextView
+                    android:id="@+id/textViewClassTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Class: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOverallRating" />
+
+                <TextView
+                    android:id="@+id/textViewClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="ARST-190"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewClassTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOverallRating" />
+
+                <TextView
+                    android:id="@+id/textViewClassRecommendedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Recommended: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewClass" />
+
+                <TextView
+                    android:id="@+id/textViewRecommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewClassRecommendedTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewClassRecommendedTitle" />
+
+                <TextView
+                    android:id="@+id/textViewClassSkillTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Lecture Skill: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewClassRecommendedTitle" />
+
+                <TextView
+                    android:id="@+id/textViewSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewClassSkillTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewClassSkillTitle" />
+
+                <TextView
+                    android:id="@+id/textViewAccessibleTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Accessible Outside Class: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewClassSkillTitle" />
+
+                <TextView
+                    android:id="@+id/textViewAccessible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAccessibleTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewAccessibleTitle" />
+
+                <TextView
+                    android:id="@+id/textViewReturnTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Assignment Return Speed: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAccessibleTitle" />
+
+                <TextView
+                    android:id="@+id/textViewReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Very Good"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewReturnTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewReturnTitle" />
+
+                <TextView
+                    android:id="@+id/textViewFeedbackTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Useful Feedback: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewReturnTitle" />
+
+                <TextView
+                    android:id="@+id/textViewFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewFeedbackTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFeedbackTitle" />
+
+                <TextView
+                    android:id="@+id/textViewDiscussionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Discussion Facilitation: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewFeedbackTitle" />
+
+                <TextView
+                    android:id="@+id/textViewDiscussion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewDiscussionTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDiscussionTitle" />
+
+                <TextView
+                    android:id="@+id/textViewGradeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Grade Received: "
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDiscussionTitle" />
+
+                <TextView
+                    android:id="@+id/textViewGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellent"
+                    android:textColor="@color/material_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewGradeTitle"
+                    app:layout_constraintTop_toTopOf="@+id/textViewGradeTitle" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Professor Hill is the best professor this univeristy has to offer. If you ever get a chance, take a class with him!"
+                android:textColor="@color/material_gray"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

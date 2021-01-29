@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff </color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#C41E3A</color>
+    <color name="colorNull">#808080</color>
+    <color name="colorNew">#1AC41E3A</color>
+    <color name="black">#000000</color>
+    <color name="success">#81c784</color>
+    <color name="colorDanger">#e57373</color>
+    <color name="colorSuccess">#81c784</color>
+    <color name="colorDefault">#eeeeee</color>
+    <color name="colorSearchQuery">#D9ffffff</color>
+
+
+    <color name="material_black">#212121</color>
+    <color name="material_gray">#424242</color>
+
+    <color name="colorAccentLight">#757575</color>
+</resources>

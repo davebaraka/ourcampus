@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:id="@+id/textViewFragmentName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:text="Getting Started"
+                android:textColor="@color/material_gray"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Name"
+        android:textStyle="bold"
+        android:textColor="@color/material_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:hint="Add"
+        app:layout_constraintStart_toStartOf="@+id/textViewDisplayName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDisplayName" />
+
+    <TextView
+        android:id="@+id/textViewClassYearAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Year"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/material_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextDisplayName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDisplayName" />
+
+    <TextView
+        android:id="@+id/textViewClassYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/editTextBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/material_gray"
+        android:hint="Add"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewClassYearAlt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassYearAlt" />
+
+    <TextView
+        android:id="@+id/textViewProPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Profile Picture"
+        android:textColor="@color/material_gray"
+        app:layout_constraintStart_toStartOf="@+id/textViewClassYear"
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassYear" />
+
+    <TextView
+        android:id="@+id/textViewPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/editTextBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/material_gray"
+        android:hint="Add"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewProPic"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProPic" />
+
+    <TextView
+        android:id="@+id/textViewIncognitoAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:drawablePadding="8dp"
+        android:text="Incognito"
+        android:textColor="@color/material_gray"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoto" />
+
+    <TextView
+        android:id="@+id/textViewIncognito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/editTextBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/material_gray"
+        android:text="Off"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewIncognitoAlt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIncognitoAlt"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIncognito">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fltActBtnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                android:focusable="true"
+                android:theme="@style/SelectableItemDefault"
+                app:borderWidth="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_checkmark" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
